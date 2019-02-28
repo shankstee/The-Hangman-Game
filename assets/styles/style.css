@@ -1,9 +1,22 @@
+.nav-color {
+    background-color: #7f8fa6;
+    border-bottom: solid 2px black
+}
+
+.nav-text {
+    color: black;
+}
+
 .leftBox {
-    background-color:yellow;
+    background-color: #353b48;
+    border: solid 2px black;
 }
 
 .rightBox {
-    background-color: green;
+    background-color: #40739e;
+    border-right: solid 2px black;
+    border-bottom:  solid 2px black;
+    border-top: solid 2px black;
 }
 
 .boxRow {
@@ -13,14 +26,22 @@
 #footer {
     position: fixed;
     height: 50px;
-    background-color: green;
+    background-color: #718093;
     bottom: 0px;
     left: 0px;
     right: 0px;
     margin-bottom: 0px;
+    border-top: solid 2px black
 }
 
 #rapperImage {
     width: 45%;
     height: 45%;
+}
+
+.alertBox-width {
+    width: 95%;
+}
+h4.d-flex {
+    color: aliceblue;
 }

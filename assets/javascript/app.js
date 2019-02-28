@@ -1,6 +1,3 @@
-let userKeyPressed;
-let guessedLettersBox = document.getElementById("alreadyGuessedKey");
-let guessedArray = [];
 const objsOfartist = {
     artistsArry: [
     {
@@ -39,8 +36,10 @@ const objsOfartist = {
 
 ]};
 
-
-
+let userKeyPressed;
+let guessedLettersBox = document.getElementById("alreadyGuessedKey");
+let guessedArray = [];
+let displayWordTag = document.getElementById("currentWordBox");
 
 // Now lets get a random name/obj form the array of artist objects
 
@@ -49,21 +48,17 @@ var currentArtistObj = objsOfartist.artistsArry[Math.floor(Math.random() * Math.
 // now lets take the random word and display that amount of _ _ _
 function displayUnderscores() {
     for (let i = 0; i < currentArtistObj.name.length; i++) {
-        let displayWordTag = document.getElementById("currentWordBox");
         displayWordTag.innerHTML = "";
         guessedArray.push("_");
-        displayWordTag.innerHTML = guessedArray;
     }
-    
+    // update an array with underscores and then display that array
 }
 
 displayUnderscores();
- 
-
-
 
 // Capture the key the user presses on
 document.onkeypress = function(event) {
+    
     userKeyPressed = event.key.toLowerCase();
     guessedLettersBox.innerHTML += userKeyPressed + " ";
     console.log(userKeyPressed);
@@ -76,6 +71,7 @@ document.onkeypress = function(event) {
         
         
     }
+    displayWordTag.innerHTML = guessedArray;
     
 };
 
