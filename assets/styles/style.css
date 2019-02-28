@@ -9,3 +9,18 @@
 .boxRow {
     margin-top: 3%;
 }
+
+#footer {
+    position: fixed;
+    height: 50px;
+    background-color: green;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+}
+
+#rapperImage {
+    width: 45%;
+    height: 45%;
+}
