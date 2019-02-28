@@ -40,6 +40,8 @@ const objsOfartist = {
 ]};
 
 
+
+
 // Now lets get a random name/obj form the array of artist objects
 
 var currentArtistObj = objsOfartist.artistsArry[Math.floor(Math.random() * Math.floor(7))];
@@ -48,18 +50,16 @@ var currentArtistObj = objsOfartist.artistsArry[Math.floor(Math.random() * Math.
 function displayUnderscores() {
     for (let i = 0; i < currentArtistObj.name.length; i++) {
         let displayWordTag = document.getElementById("currentWordBox");
+        displayWordTag.innerHTML = "";
         guessedArray.push("_");
         displayWordTag.innerHTML = guessedArray;
     }
     
 }
+
+displayUnderscores();
  
 
- function addToUnderscores(addThis) {
-     console.log(guessedArray);
-     guessedArray.splice(3,1, addThis);
-     console.log(guessedArray);
- }
 
 
 // Capture the key the user presses on
@@ -70,8 +70,7 @@ document.onkeypress = function(event) {
 
     for (let i = 0; i < currentArtistObj.name.length; i++) {
         if (event.key === currentArtistObj.name[i]) {
-            addToUnderscores(userKeyPressed);
-            console.log(guessedArray);
+            guessedArray.splice(i,1, userKeyPressed);
         }
         console.log(guessedArray);
         
